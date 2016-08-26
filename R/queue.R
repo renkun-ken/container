@@ -1,10 +1,9 @@
 #' @export
 queue <- function() {
   pointer <- create_queue()
-
   local({
     empty <- function() queue_empty(pointer)
-    size <- function(x) queue_size(pointer)
+    size <- function() queue_size(pointer)
     push <- function(x) queue_push(pointer, x)
     pop <- function() queue_pop(pointer)
     front <- function() queue_front(pointer)
