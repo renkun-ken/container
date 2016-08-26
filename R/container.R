@@ -1,6 +1,12 @@
 container <- function(x, class) {
   lockEnvironment(x, bindings = TRUE)
-  structure(x, class = c(class, "container", "environment"))
+  reg.finalizer(x, function(x) x$finalize())
+  class(x) <- c(class, "container", "environment")
+  x
+}
+
+get_pointer <- function(x) {
+  parent.env(x)$pointer
 }
 
 #' @export

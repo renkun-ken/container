@@ -6,6 +6,7 @@ priority_queue <- function(x)
 priority_queue.integer <- function(x) {
   pointer <- priority_queue_int_create()
   local({
+    finalize <- function() priority_queue_int_release(pointer)
     empty <- function() priority_queue_int_empty(pointer)
     size <- function() priority_queue_int_size(pointer)
     push <- function(x) priority_queue_int_push(pointer, x)
@@ -19,6 +20,7 @@ priority_queue.integer <- function(x) {
 priority_queue.numeric <- function(x) {
   pointer <- priority_queue_double_create()
   local({
+    finalize <- function() priority_queue_double_release(pointer)
     empty <- function() priority_queue_double_empty(pointer)
     size <- function() priority_queue_double_size(pointer)
     push <- function(x) priority_queue_double_push(pointer, x)

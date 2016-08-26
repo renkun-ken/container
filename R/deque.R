@@ -2,6 +2,7 @@
 deque <- function() {
   pointer <- deque_create()
   local({
+    finalize <- function() deque_release(pointer)
     empty <- function() deque_empty(pointer)
     size <- function() deque_size(pointer)
     push_back <- function(x) deque_push_back(pointer, x)
@@ -11,13 +12,11 @@ deque <- function() {
     back <- function() deque_back(pointer)
     front <- function() deque_front(pointer)
     at <- function(i) deque_at(pointer, i)
-    as_list <- function() deque_as_list(pointer)
     container(environment(), "deque")
   })
 }
 
 #' @export
 as.list.deque <- function(x, ...) {
-  x$as_list()
+  deque_as_list(get_pointer(x))
 }
-
