@@ -1,0 +1,19 @@
+Package: container
+Title: C++ Containers for R
+Version: 0.0.0.9000
+Authors@R: person("Kun", "Ren", email = "mail@renkun.me", role = c("aut", "cre"))
+Description: Provides C++ containers to be used in R
+Depends:
+    R (>= 3.0.0)
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+LinkingTo: Rcpp
+Imports:
+    Rcpp
+Suggests:
+    covr,
+    testthat
+ByteCompile: TRUE
+SystemRequirements: C++11
+RoxygenNote: 5.0.1
