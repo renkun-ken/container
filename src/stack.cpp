@@ -6,7 +6,7 @@ using namespace Rcpp;
 typedef std::stack<SEXP> stack;
 
 // [[Rcpp::export]]
-XPtr<stack> create_stack() {
+XPtr<stack> stack_create() {
   stack *x = new stack;
   return XPtr<stack>(x);
 }

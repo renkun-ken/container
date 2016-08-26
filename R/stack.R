@@ -1,6 +1,6 @@
 #' @export
 stack <- function() {
-  pointer <- create_stack()
+  pointer <- stack_create()
   local({
     empty <- function() stack_empty(pointer)
     size <- function() stack_size(pointer)

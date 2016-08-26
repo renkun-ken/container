@@ -2,6 +2,9 @@
 
 S3method(as.list,deque)
 S3method(print,container)
+S3method(priority_queue,"NULL")
+S3method(priority_queue,integer)
+S3method(priority_queue,numeric)
 export(deque)
 export(priority_queue)
 export(queue)

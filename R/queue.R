@@ -1,6 +1,6 @@
 #' @export
 queue <- function() {
-  pointer <- create_queue()
+  pointer <- queue_create()
   local({
     empty <- function() queue_empty(pointer)
     size <- function() queue_size(pointer)

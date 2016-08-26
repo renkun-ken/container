@@ -6,7 +6,7 @@ using namespace Rcpp;
 typedef std::deque<SEXP> deque;
 
 // [[Rcpp::export]]
-XPtr<deque> create_deque() {
+XPtr<deque> deque_create() {
   deque *x = new deque;
   return XPtr<deque>(x);
 }

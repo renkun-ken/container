@@ -6,7 +6,7 @@ using namespace Rcpp;
 typedef std::queue<SEXP> queue;
 
 // [[Rcpp::export]]
-XPtr<queue> create_queue() {
+XPtr<queue> queue_create() {
   queue *x = new queue;
   return XPtr<queue>(x);
 }

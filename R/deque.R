@@ -1,6 +1,6 @@
 #' @export
 deque <- function() {
-  pointer <- create_deque()
+  pointer <- deque_create()
   local({
     empty <- function() deque_empty(pointer)
     size <- function() deque_size(pointer)
