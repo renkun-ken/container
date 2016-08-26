@@ -49,6 +49,6 @@ int priority_queue_int_top(XPtr<priority_queue_int> x)
   if (x->size()) {
     return x->top();
   } else {
-    return NA_REAL;
+    return NA_INTEGER;
   }
 }
