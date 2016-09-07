@@ -88,7 +88,7 @@ List deque_as_list(XPtr<deque> x)
 {
   List list(x->size());
   R_xlen_t i = 0;
-  for (const auto value : *x) {
+  for (const auto& value : *x) {
     list[i] = value;
     ++i;
   }
