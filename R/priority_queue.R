@@ -1,11 +1,20 @@
+#' Priority queue
+#' @name priority_queue
 #' @export
-priority_queue <- function(x)
-  UseMethod("priority_queue")
+#' @include container.R
+NULL
+
+priority_queue_new <- function(x)
+  UseMethod("priority_queue_new")
+
+priority_queue <- Container("priority_queue",
+  new = priority_queue_new)
 
 #' @export
-priority_queue.integer <- function(x) {
+priority_queue_new.integer <- function(x) {
   pointer <- priority_queue_int_create()
   local({
+    type <- "integer"
     finalize <- function() priority_queue_int_release(pointer)
     empty <- function() priority_queue_int_empty(pointer)
     size <- function() priority_queue_int_size(pointer)
@@ -17,9 +26,10 @@ priority_queue.integer <- function(x) {
 }
 
 #' @export
-priority_queue.numeric <- function(x) {
+priority_queue_new.numeric <- function(x) {
   pointer <- priority_queue_double_create()
   local({
+    type <- "numeric"
     finalize <- function() priority_queue_double_release(pointer)
     empty <- function() priority_queue_double_empty(pointer)
     size <- function() priority_queue_double_size(pointer)
@@ -31,4 +41,4 @@ priority_queue.numeric <- function(x) {
 }
 
 #' @export
-priority_queue.NULL <- priority_queue.numeric
+priority_queue_new.NULL <- priority_queue_new.numeric

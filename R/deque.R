@@ -1,5 +1,11 @@
+#' Deque
+#' @name deque
 #' @export
-deque <- function() {
+#' @include container.R
+NULL
+
+deque <- Container("deque",
+  new = function() {
   pointer <- deque_create()
   local({
     finalize <- function() deque_release(pointer)
@@ -14,7 +20,7 @@ deque <- function() {
     at <- function(i) deque_at(pointer, i)
     container(environment(), "deque")
   })
-}
+})
 
 #' @export
 as.list.deque <- function(x, ...) {

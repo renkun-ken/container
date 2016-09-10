@@ -17,3 +17,11 @@ Suggests:
 ByteCompile: TRUE
 SystemRequirements: C++11
 RoxygenNote: 5.0.1
+Collate:
+    'RcppExports.R'
+    'container.R'
+    'deque.R'
+    'package.R'
+    'priority_queue.R'
+    'queue.R'
+    'stack.R'

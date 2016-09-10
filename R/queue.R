@@ -1,5 +1,11 @@
+#' Queue
+#' @name queue
 #' @export
-queue <- function() {
+#' @include container.R
+NULL
+
+queue <- Container("queue",
+  new = function() {
   pointer <- queue_create()
   local({
     finalize <- function() queue_release(pointer)
@@ -11,4 +17,4 @@ queue <- function() {
     back <- function() queue_back(pointer)
     container(environment(), "queue")
   })
-}
+})
