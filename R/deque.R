@@ -26,3 +26,23 @@ deque <- Container("deque",
 as.list.deque <- function(x, ...) {
   deque_as_list(get_pointer(x))
 }
+
+#' @export
+as.double.deque <- function(x, ...) {
+  as.double(deque_as_list(get_pointer(x)))
+}
+
+#' @export
+as.vector.deque <- function(x, mode = "any") {
+  as.vector(deque_as_list(get_pointer(x)), mode)
+}
+
+#' @export
+as.character.deque <- function(x, ...) {
+  as.character.default(deque_as_list(get_pointer(x)), ...)
+}
+
+#' @export
+as.logical.deque <- function(x, ...) {
+  as.logical(deque_as_list(get_pointer(x)), ...)
+}
