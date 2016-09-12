@@ -7,6 +7,7 @@ Container <- function(class, ...) {
   e
 }
 
+#' @importFrom utils ls.str
 #' @export
 print.Container <- function(x, ...) {
   cat(sprintf("<Container: %s>\n", x$class))
@@ -24,6 +25,7 @@ get_pointer <- function(x) {
   parent.env(x)$pointer
 }
 
+#' @importFrom utils ls.str
 #' @export
 print.container <- function(x, ...) {
   cat("<", class(x)[[1L]], ">\n", sep = "")
