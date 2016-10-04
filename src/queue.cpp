@@ -12,31 +12,31 @@ XPtr<queue> queue_create() {
 }
 
 // [[Rcpp::export]]
-void queue_release(XPtr<queue> x)
+void queue_release(XPtr<queue>& x)
 {
   x.release();
 }
 
 // [[Rcpp::export]]
-bool queue_empty(XPtr<queue> x)
+bool queue_empty(const XPtr<queue>& x)
 {
   return x->empty();
 }
 
 // [[Rcpp::export]]
-R_xlen_t queue_size(XPtr<queue> x)
+R_xlen_t queue_size(const XPtr<queue>& x)
 {
   return x->size();
 }
 
 // [[Rcpp::export]]
-void queue_push(XPtr<queue> x, SEXP value)
+void queue_push(XPtr<queue>& x, const SEXP& value)
 {
   x->push(value);
 }
 
 // [[Rcpp::export]]
-void queue_pop(XPtr<queue> x)
+void queue_pop(XPtr<queue>& x)
 {
   if (x->size()) {
     x->pop();
@@ -44,7 +44,7 @@ void queue_pop(XPtr<queue> x)
 }
 
 // [[Rcpp::export]]
-SEXP queue_back(XPtr<queue> x)
+SEXP queue_back(const XPtr<queue>& x)
 {
   if (x->size()) {
     return x->back();
@@ -54,7 +54,7 @@ SEXP queue_back(XPtr<queue> x)
 }
 
 // [[Rcpp::export]]
-SEXP queue_front(XPtr<queue> x)
+SEXP queue_front(const XPtr<queue>& x)
 {
   if (x->size()) {
     return x->front();

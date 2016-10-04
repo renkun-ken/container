@@ -179,65 +179,65 @@ BEGIN_RCPP
 END_RCPP
 }
 // priority_queue_double_release
-void priority_queue_double_release(XPtr<priority_queue_double> x);
+void priority_queue_double_release(XPtr<priority_queue_double>& x);
 RcppExport SEXP container_priority_queue_double_release(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< XPtr<priority_queue_double> >::type x(xSEXP);
+    Rcpp::traits::input_parameter< XPtr<priority_queue_double>& >::type x(xSEXP);
     priority_queue_double_release(x);
     return R_NilValue;
 END_RCPP
 }
 // priority_queue_double_empty
-bool priority_queue_double_empty(XPtr<priority_queue_double> x);
+bool priority_queue_double_empty(const XPtr<priority_queue_double>& x);
 RcppExport SEXP container_priority_queue_double_empty(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< XPtr<priority_queue_double> >::type x(xSEXP);
+    Rcpp::traits::input_parameter< const XPtr<priority_queue_double>& >::type x(xSEXP);
     rcpp_result_gen = Rcpp::wrap(priority_queue_double_empty(x));
     return rcpp_result_gen;
 END_RCPP
 }
 // priority_queue_double_size
-R_xlen_t priority_queue_double_size(XPtr<priority_queue_double> x);
+R_xlen_t priority_queue_double_size(const XPtr<priority_queue_double>& x);
 RcppExport SEXP container_priority_queue_double_size(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< XPtr<priority_queue_double> >::type x(xSEXP);
+    Rcpp::traits::input_parameter< const XPtr<priority_queue_double>& >::type x(xSEXP);
     rcpp_result_gen = Rcpp::wrap(priority_queue_double_size(x));
     return rcpp_result_gen;
 END_RCPP
 }
 // priority_queue_double_push
-void priority_queue_double_push(XPtr<priority_queue_double> x, double value);
+void priority_queue_double_push(XPtr<priority_queue_double>& x, double value);
 RcppExport SEXP container_priority_queue_double_push(SEXP xSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< XPtr<priority_queue_double> >::type x(xSEXP);
+    Rcpp::traits::input_parameter< XPtr<priority_queue_double>& >::type x(xSEXP);
     Rcpp::traits::input_parameter< double >::type value(valueSEXP);
     priority_queue_double_push(x, value);
     return R_NilValue;
 END_RCPP
 }
 // priority_queue_double_pop
-void priority_queue_double_pop(XPtr<priority_queue_double> x);
+void priority_queue_double_pop(XPtr<priority_queue_double>& x);
 RcppExport SEXP container_priority_queue_double_pop(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< XPtr<priority_queue_double> >::type x(xSEXP);
+    Rcpp::traits::input_parameter< XPtr<priority_queue_double>& >::type x(xSEXP);
     priority_queue_double_pop(x);
     return R_NilValue;
 END_RCPP
 }
 // priority_queue_double_top
-double priority_queue_double_top(XPtr<priority_queue_double> x);
+double priority_queue_double_top(const XPtr<priority_queue_double>& x);
 RcppExport SEXP container_priority_queue_double_top(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< XPtr<priority_queue_double> >::type x(xSEXP);
+    Rcpp::traits::input_parameter< const XPtr<priority_queue_double>& >::type x(xSEXP);
     rcpp_result_gen = Rcpp::wrap(priority_queue_double_top(x));
     return rcpp_result_gen;
 END_RCPP
@@ -253,65 +253,65 @@ BEGIN_RCPP
 END_RCPP
 }
 // priority_queue_int_release
-void priority_queue_int_release(XPtr<priority_queue_int> x);
+void priority_queue_int_release(XPtr<priority_queue_int>& x);
 RcppExport SEXP container_priority_queue_int_release(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< XPtr<priority_queue_int> >::type x(xSEXP);
+    Rcpp::traits::input_parameter< XPtr<priority_queue_int>& >::type x(xSEXP);
     priority_queue_int_release(x);
     return R_NilValue;
 END_RCPP
 }
 // priority_queue_int_empty
-bool priority_queue_int_empty(XPtr<priority_queue_int> x);
+bool priority_queue_int_empty(const XPtr<priority_queue_int>& x);
 RcppExport SEXP container_priority_queue_int_empty(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< XPtr<priority_queue_int> >::type x(xSEXP);
+    Rcpp::traits::input_parameter< const XPtr<priority_queue_int>& >::type x(xSEXP);
     rcpp_result_gen = Rcpp::wrap(priority_queue_int_empty(x));
     return rcpp_result_gen;
 END_RCPP
 }
 // priority_queue_int_size
-R_xlen_t priority_queue_int_size(XPtr<priority_queue_int> x);
+R_xlen_t priority_queue_int_size(const XPtr<priority_queue_int>& x);
 RcppExport SEXP container_priority_queue_int_size(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< XPtr<priority_queue_int> >::type x(xSEXP);
+    Rcpp::traits::input_parameter< const XPtr<priority_queue_int>& >::type x(xSEXP);
     rcpp_result_gen = Rcpp::wrap(priority_queue_int_size(x));
     return rcpp_result_gen;
 END_RCPP
 }
 // priority_queue_int_push
-void priority_queue_int_push(XPtr<priority_queue_int> x, int value);
+void priority_queue_int_push(XPtr<priority_queue_int>& x, int value);
 RcppExport SEXP container_priority_queue_int_push(SEXP xSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< XPtr<priority_queue_int> >::type x(xSEXP);
+    Rcpp::traits::input_parameter< XPtr<priority_queue_int>& >::type x(xSEXP);
     Rcpp::traits::input_parameter< int >::type value(valueSEXP);
     priority_queue_int_push(x, value);
     return R_NilValue;
 END_RCPP
 }
 // priority_queue_int_pop
-void priority_queue_int_pop(XPtr<priority_queue_int> x);
+void priority_queue_int_pop(XPtr<priority_queue_int>& x);
 RcppExport SEXP container_priority_queue_int_pop(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< XPtr<priority_queue_int> >::type x(xSEXP);
+    Rcpp::traits::input_parameter< XPtr<priority_queue_int>& >::type x(xSEXP);
     priority_queue_int_pop(x);
     return R_NilValue;
 END_RCPP
 }
 // priority_queue_int_top
-int priority_queue_int_top(XPtr<priority_queue_int> x);
+int priority_queue_int_top(const XPtr<priority_queue_int>& x);
 RcppExport SEXP container_priority_queue_int_top(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< XPtr<priority_queue_int> >::type x(xSEXP);
+    Rcpp::traits::input_parameter< const XPtr<priority_queue_int>& >::type x(xSEXP);
     rcpp_result_gen = Rcpp::wrap(priority_queue_int_top(x));
     return rcpp_result_gen;
 END_RCPP
@@ -327,76 +327,76 @@ BEGIN_RCPP
 END_RCPP
 }
 // queue_release
-void queue_release(XPtr<queue> x);
+void queue_release(XPtr<queue>& x);
 RcppExport SEXP container_queue_release(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< XPtr<queue> >::type x(xSEXP);
+    Rcpp::traits::input_parameter< XPtr<queue>& >::type x(xSEXP);
     queue_release(x);
     return R_NilValue;
 END_RCPP
 }
 // queue_empty
-bool queue_empty(XPtr<queue> x);
+bool queue_empty(const XPtr<queue>& x);
 RcppExport SEXP container_queue_empty(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< XPtr<queue> >::type x(xSEXP);
+    Rcpp::traits::input_parameter< const XPtr<queue>& >::type x(xSEXP);
     rcpp_result_gen = Rcpp::wrap(queue_empty(x));
     return rcpp_result_gen;
 END_RCPP
 }
 // queue_size
-R_xlen_t queue_size(XPtr<queue> x);
+R_xlen_t queue_size(const XPtr<queue>& x);
 RcppExport SEXP container_queue_size(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< XPtr<queue> >::type x(xSEXP);
+    Rcpp::traits::input_parameter< const XPtr<queue>& >::type x(xSEXP);
     rcpp_result_gen = Rcpp::wrap(queue_size(x));
     return rcpp_result_gen;
 END_RCPP
 }
 // queue_push
-void queue_push(XPtr<queue> x, SEXP value);
+void queue_push(XPtr<queue>& x, const SEXP& value);
 RcppExport SEXP container_queue_push(SEXP xSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< XPtr<queue> >::type x(xSEXP);
-    Rcpp::traits::input_parameter< SEXP >::type value(valueSEXP);
+    Rcpp::traits::input_parameter< XPtr<queue>& >::type x(xSEXP);
+    Rcpp::traits::input_parameter< const SEXP& >::type value(valueSEXP);
     queue_push(x, value);
     return R_NilValue;
 END_RCPP
 }
 // queue_pop
-void queue_pop(XPtr<queue> x);
+void queue_pop(XPtr<queue>& x);
 RcppExport SEXP container_queue_pop(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< XPtr<queue> >::type x(xSEXP);
+    Rcpp::traits::input_parameter< XPtr<queue>& >::type x(xSEXP);
     queue_pop(x);
     return R_NilValue;
 END_RCPP
 }
 // queue_back
-SEXP queue_back(XPtr<queue> x);
+SEXP queue_back(const XPtr<queue>& x);
 RcppExport SEXP container_queue_back(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< XPtr<queue> >::type x(xSEXP);
+    Rcpp::traits::input_parameter< const XPtr<queue>& >::type x(xSEXP);
     rcpp_result_gen = Rcpp::wrap(queue_back(x));
     return rcpp_result_gen;
 END_RCPP
 }
 // queue_front
-SEXP queue_front(XPtr<queue> x);
+SEXP queue_front(const XPtr<queue>& x);
 RcppExport SEXP container_queue_front(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< XPtr<queue> >::type x(xSEXP);
+    Rcpp::traits::input_parameter< const XPtr<queue>& >::type x(xSEXP);
     rcpp_result_gen = Rcpp::wrap(queue_front(x));
     return rcpp_result_gen;
 END_RCPP
@@ -412,65 +412,65 @@ BEGIN_RCPP
 END_RCPP
 }
 // stack_release
-void stack_release(XPtr<stack> x);
+void stack_release(XPtr<stack>& x);
 RcppExport SEXP container_stack_release(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< XPtr<stack> >::type x(xSEXP);
+    Rcpp::traits::input_parameter< XPtr<stack>& >::type x(xSEXP);
     stack_release(x);
     return R_NilValue;
 END_RCPP
 }
 // stack_empty
-bool stack_empty(XPtr<stack> x);
+bool stack_empty(const XPtr<stack>& x);
 RcppExport SEXP container_stack_empty(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< XPtr<stack> >::type x(xSEXP);
+    Rcpp::traits::input_parameter< const XPtr<stack>& >::type x(xSEXP);
     rcpp_result_gen = Rcpp::wrap(stack_empty(x));
     return rcpp_result_gen;
 END_RCPP
 }
 // stack_size
-R_xlen_t stack_size(XPtr<stack> x);
+R_xlen_t stack_size(const XPtr<stack>& x);
 RcppExport SEXP container_stack_size(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< XPtr<stack> >::type x(xSEXP);
+    Rcpp::traits::input_parameter< const XPtr<stack>& >::type x(xSEXP);
     rcpp_result_gen = Rcpp::wrap(stack_size(x));
     return rcpp_result_gen;
 END_RCPP
 }
 // stack_push
-void stack_push(XPtr<stack> x, SEXP value);
+void stack_push(XPtr<stack>& x, const SEXP& value);
 RcppExport SEXP container_stack_push(SEXP xSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< XPtr<stack> >::type x(xSEXP);
-    Rcpp::traits::input_parameter< SEXP >::type value(valueSEXP);
+    Rcpp::traits::input_parameter< XPtr<stack>& >::type x(xSEXP);
+    Rcpp::traits::input_parameter< const SEXP& >::type value(valueSEXP);
     stack_push(x, value);
     return R_NilValue;
 END_RCPP
 }
 // stack_pop
-void stack_pop(XPtr<stack> x);
+void stack_pop(XPtr<stack>& x);
 RcppExport SEXP container_stack_pop(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< XPtr<stack> >::type x(xSEXP);
+    Rcpp::traits::input_parameter< XPtr<stack>& >::type x(xSEXP);
     stack_pop(x);
     return R_NilValue;
 END_RCPP
 }
 // stack_top
-SEXP stack_top(XPtr<stack> x);
+SEXP stack_top(XPtr<stack>& x);
 RcppExport SEXP container_stack_top(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< XPtr<stack> >::type x(xSEXP);
+    Rcpp::traits::input_parameter< XPtr<stack>& >::type x(xSEXP);
     rcpp_result_gen = Rcpp::wrap(stack_top(x));
     return rcpp_result_gen;
 END_RCPP

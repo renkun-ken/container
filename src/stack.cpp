@@ -12,31 +12,31 @@ XPtr<stack> stack_create() {
 }
 
 // [[Rcpp::export]]
-void stack_release(XPtr<stack> x)
+void stack_release(XPtr<stack>& x)
 {
   x.release();
 }
 
 // [[Rcpp::export]]
-bool stack_empty(XPtr<stack> x)
+bool stack_empty(const XPtr<stack>& x)
 {
   return x->empty();
 }
 
 // [[Rcpp::export]]
-R_xlen_t stack_size(XPtr<stack> x)
+R_xlen_t stack_size(const XPtr<stack>& x)
 {
   return x->size();
 }
 
 // [[Rcpp::export]]
-void stack_push(XPtr<stack> x, SEXP value)
+void stack_push(XPtr<stack>& x, const SEXP& value)
 {
   x->push(value);
 }
 
 // [[Rcpp::export]]
-void stack_pop(XPtr<stack> x)
+void stack_pop(XPtr<stack>& x)
 {
   if (x->size()) {
     x->pop();
@@ -44,7 +44,7 @@ void stack_pop(XPtr<stack> x)
 }
 
 // [[Rcpp::export]]
-SEXP stack_top(XPtr<stack> x)
+SEXP stack_top(XPtr<stack>& x)
 {
   if (x->size()) {
     return x->top();

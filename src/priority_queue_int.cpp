@@ -12,31 +12,31 @@ XPtr<priority_queue_int> priority_queue_int_create() {
 }
 
 // [[Rcpp::export]]
-void priority_queue_int_release(XPtr<priority_queue_int> x)
+void priority_queue_int_release(XPtr<priority_queue_int>& x)
 {
   x.release();
 }
 
 // [[Rcpp::export]]
-bool priority_queue_int_empty(XPtr<priority_queue_int> x)
+bool priority_queue_int_empty(const XPtr<priority_queue_int>& x)
 {
   return x->empty();
 }
 
 // [[Rcpp::export]]
-R_xlen_t priority_queue_int_size(XPtr<priority_queue_int> x)
+R_xlen_t priority_queue_int_size(const XPtr<priority_queue_int>& x)
 {
   return x->size();
 }
 
 // [[Rcpp::export]]
-void priority_queue_int_push(XPtr<priority_queue_int> x, int value)
+void priority_queue_int_push(XPtr<priority_queue_int>& x, int value)
 {
   x->push(value);
 }
 
 // [[Rcpp::export]]
-void priority_queue_int_pop(XPtr<priority_queue_int> x)
+void priority_queue_int_pop(XPtr<priority_queue_int>& x)
 {
   if (x->size()) {
     x->pop();
@@ -44,7 +44,7 @@ void priority_queue_int_pop(XPtr<priority_queue_int> x)
 }
 
 // [[Rcpp::export]]
-int priority_queue_int_top(XPtr<priority_queue_int> x)
+int priority_queue_int_top(const XPtr<priority_queue_int>& x)
 {
   if (x->size()) {
     return x->top();
