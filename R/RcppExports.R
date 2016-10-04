@@ -17,6 +17,10 @@ deque_size <- function(x) {
     .Call('container_deque_size', PACKAGE = 'container', x)
 }
 
+deque_clear <- function(x) {
+    invisible(.Call('container_deque_clear', PACKAGE = 'container', x))
+}
+
 deque_push_back <- function(x, value) {
     invisible(.Call('container_deque_push_back', PACKAGE = 'container', x, value))
 }
@@ -43,6 +47,14 @@ deque_front <- function(x) {
 
 deque_at <- function(x, i) {
     .Call('container_deque_at', PACKAGE = 'container', x, i)
+}
+
+deque_insert <- function(x, i, obj) {
+    invisible(.Call('container_deque_insert', PACKAGE = 'container', x, i, obj))
+}
+
+deque_erase <- function(x, i) {
+    invisible(.Call('container_deque_erase', PACKAGE = 'container', x, i))
 }
 
 deque_as_list <- function(x) {

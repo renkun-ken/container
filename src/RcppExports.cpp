@@ -17,120 +17,153 @@ BEGIN_RCPP
 END_RCPP
 }
 // deque_release
-void deque_release(XPtr<deque> x);
+void deque_release(XPtr<deque>& x);
 RcppExport SEXP container_deque_release(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< XPtr<deque> >::type x(xSEXP);
+    Rcpp::traits::input_parameter< XPtr<deque>& >::type x(xSEXP);
     deque_release(x);
     return R_NilValue;
 END_RCPP
 }
 // deque_empty
-bool deque_empty(XPtr<deque> x);
+bool deque_empty(const XPtr<deque>& x);
 RcppExport SEXP container_deque_empty(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< XPtr<deque> >::type x(xSEXP);
+    Rcpp::traits::input_parameter< const XPtr<deque>& >::type x(xSEXP);
     rcpp_result_gen = Rcpp::wrap(deque_empty(x));
     return rcpp_result_gen;
 END_RCPP
 }
 // deque_size
-R_xlen_t deque_size(XPtr<deque> x);
+R_xlen_t deque_size(const XPtr<deque>& x);
 RcppExport SEXP container_deque_size(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< XPtr<deque> >::type x(xSEXP);
+    Rcpp::traits::input_parameter< const XPtr<deque>& >::type x(xSEXP);
     rcpp_result_gen = Rcpp::wrap(deque_size(x));
     return rcpp_result_gen;
 END_RCPP
 }
+// deque_clear
+void deque_clear(XPtr<deque>& x);
+RcppExport SEXP container_deque_clear(SEXP xSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< XPtr<deque>& >::type x(xSEXP);
+    deque_clear(x);
+    return R_NilValue;
+END_RCPP
+}
 // deque_push_back
-void deque_push_back(XPtr<deque> x, SEXP value);
+void deque_push_back(XPtr<deque>& x, const SEXP& value);
 RcppExport SEXP container_deque_push_back(SEXP xSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< XPtr<deque> >::type x(xSEXP);
-    Rcpp::traits::input_parameter< SEXP >::type value(valueSEXP);
+    Rcpp::traits::input_parameter< XPtr<deque>& >::type x(xSEXP);
+    Rcpp::traits::input_parameter< const SEXP& >::type value(valueSEXP);
     deque_push_back(x, value);
     return R_NilValue;
 END_RCPP
 }
 // deque_push_front
-void deque_push_front(XPtr<deque> x, SEXP value);
+void deque_push_front(XPtr<deque>& x, const SEXP& value);
 RcppExport SEXP container_deque_push_front(SEXP xSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< XPtr<deque> >::type x(xSEXP);
-    Rcpp::traits::input_parameter< SEXP >::type value(valueSEXP);
+    Rcpp::traits::input_parameter< XPtr<deque>& >::type x(xSEXP);
+    Rcpp::traits::input_parameter< const SEXP& >::type value(valueSEXP);
     deque_push_front(x, value);
     return R_NilValue;
 END_RCPP
 }
 // deque_pop_back
-void deque_pop_back(XPtr<deque> x);
+void deque_pop_back(XPtr<deque>& x);
 RcppExport SEXP container_deque_pop_back(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< XPtr<deque> >::type x(xSEXP);
+    Rcpp::traits::input_parameter< XPtr<deque>& >::type x(xSEXP);
     deque_pop_back(x);
     return R_NilValue;
 END_RCPP
 }
 // deque_pop_front
-void deque_pop_front(XPtr<deque> x);
+void deque_pop_front(XPtr<deque>& x);
 RcppExport SEXP container_deque_pop_front(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< XPtr<deque> >::type x(xSEXP);
+    Rcpp::traits::input_parameter< XPtr<deque>& >::type x(xSEXP);
     deque_pop_front(x);
     return R_NilValue;
 END_RCPP
 }
 // deque_back
-SEXP deque_back(XPtr<deque> x);
+SEXP deque_back(const XPtr<deque>& x);
 RcppExport SEXP container_deque_back(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< XPtr<deque> >::type x(xSEXP);
+    Rcpp::traits::input_parameter< const XPtr<deque>& >::type x(xSEXP);
     rcpp_result_gen = Rcpp::wrap(deque_back(x));
     return rcpp_result_gen;
 END_RCPP
 }
 // deque_front
-SEXP deque_front(XPtr<deque> x);
+SEXP deque_front(const XPtr<deque>& x);
 RcppExport SEXP container_deque_front(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< XPtr<deque> >::type x(xSEXP);
+    Rcpp::traits::input_parameter< const XPtr<deque>& >::type x(xSEXP);
     rcpp_result_gen = Rcpp::wrap(deque_front(x));
     return rcpp_result_gen;
 END_RCPP
 }
 // deque_at
-SEXP deque_at(XPtr<deque> x, int i);
+SEXP deque_at(const XPtr<deque>& x, R_xlen_t i);
 RcppExport SEXP container_deque_at(SEXP xSEXP, SEXP iSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< XPtr<deque> >::type x(xSEXP);
-    Rcpp::traits::input_parameter< int >::type i(iSEXP);
+    Rcpp::traits::input_parameter< const XPtr<deque>& >::type x(xSEXP);
+    Rcpp::traits::input_parameter< R_xlen_t >::type i(iSEXP);
     rcpp_result_gen = Rcpp::wrap(deque_at(x, i));
     return rcpp_result_gen;
 END_RCPP
 }
+// deque_insert
+void deque_insert(const XPtr<deque>& x, R_xlen_t i, const SEXP& obj);
+RcppExport SEXP container_deque_insert(SEXP xSEXP, SEXP iSEXP, SEXP objSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const XPtr<deque>& >::type x(xSEXP);
+    Rcpp::traits::input_parameter< R_xlen_t >::type i(iSEXP);
+    Rcpp::traits::input_parameter< const SEXP& >::type obj(objSEXP);
+    deque_insert(x, i, obj);
+    return R_NilValue;
+END_RCPP
+}
+// deque_erase
+void deque_erase(XPtr<deque>& x, R_xlen_t i);
+RcppExport SEXP container_deque_erase(SEXP xSEXP, SEXP iSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< XPtr<deque>& >::type x(xSEXP);
+    Rcpp::traits::input_parameter< R_xlen_t >::type i(iSEXP);
+    deque_erase(x, i);
+    return R_NilValue;
+END_RCPP
+}
 // deque_as_list
-List deque_as_list(XPtr<deque> x);
+List deque_as_list(const XPtr<deque>& x);
 RcppExport SEXP container_deque_as_list(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< XPtr<deque> >::type x(xSEXP);
+    Rcpp::traits::input_parameter< const XPtr<deque>& >::type x(xSEXP);
     rcpp_result_gen = Rcpp::wrap(deque_as_list(x));
     return rcpp_result_gen;
 END_RCPP
